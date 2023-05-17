@@ -3,5 +3,6 @@ const dotenv = require('dotenv');
 dotenv.config();
 
 module.exports = {
-    PORT: process.env.PORT
+    ServerConfig: require('./server-config'),
+    LoggerConfig: require('./logger-config')
 }
