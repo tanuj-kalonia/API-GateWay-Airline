@@ -2,7 +2,9 @@
 This microservice specifically handles the business logic of Authentication, This includes hashing of the password using `bcrypt while signing up. 
 authenticating the user using JWT token.
 
-Both the service interacts with the common SQL-based database - powered by Sequelize ORM
+The API_Gate_way will contain the logic of `load Balancer`, dynamic Routing of the request to diffrent sercice, `backwar Proxy` etc
+
+`Flights_API`, `Flights_Booking_Service` and `API_Gate_way` all the 3 ervice interacts with the common SQL-based database - powered by Sequelize ORM
 
 
 `src` -> Inside the src folder all the actual source code regarding the project will reside, this will not include any kind of tests. (You might want to make separate tests folder)
