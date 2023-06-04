@@ -1,4 +1,10 @@
-This is a base node js project template, which anyone can use as it has been prepared, by keeping some of the most important code principles and project management recommendations. Feel free to change anything. 
+### This is the continuation of the micro-service Flights_API which contains all the buisness logic of the Authentication.
+This microservice specifically handles the business logic of Authentication, This includes hashing of the password using `bcrypt while signing up. 
+authenticating the user using JWT token.
+
+The API_Gate_way will contain the logic of `load Balancer`, dynamic Routing of the request to diffrent sercice, `backwar Proxy` etc
+
+`Flights_API`, `Flights_Booking_Service` and `API_Gate_way` all the 3 ervice interacts with the common SQL-based database - powered by Sequelize ORM
 
 
 `src` -> Inside the src folder all the actual source code regarding the project will reside, this will not include any kind of tests. (You might want to make separate tests folder)
