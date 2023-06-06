@@ -1,13 +1,18 @@
 const { StatusCodes } = require('http-status-codes')
-const { UserRepository } = require('../repositories')
+const { UserRepository, RoleRepository } = require('../repositories')
 const AppError = require('../utils/errors/app-error')
 const { Auth } = require('../utils/common')
+const { USER_ROLES } = require('../utils/common/enum')
 
 const userRepository = new UserRepository();
+const roleRepository = new RoleRepository();
 
 async function createUser(data) {
     try {
         const user = await userRepository.create(data);
+        const role = await roleRepository.getRoleByName(USER_ROLES.CUSTOMER); // return roleId
+        console.log('role', role);
+        user.addRole(role); // ORM implimented function
         return user;
 
     } catch (error) {
